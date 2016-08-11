@@ -7,15 +7,16 @@ import java.util.Map;
 
 import com.lcw.test.user.User;
 
-public class CommonTest {
+public class CommonTest01 {
 
 	public static void main(String[] args) {
 		User user = new User();
 		user.setAge(11);
 		user.setMobile("13212321232");
 		user.setName("6x5");
-		CommonTest.test1(user);
-		System.out.println(CommonTest.getFieldMap(user).toString());
+		CommonTest01.test1(user);
+		System.out.println(CommonTest01.getFieldMap(user).toString());
+		System.out.println(CommonTest01.class.getSimpleName());
 	}
 	
 	public static void test1(Object obj){
@@ -53,7 +54,7 @@ public class CommonTest {
 		Map<String, String> fieldMap = new HashMap<>();
 		for (Field field : fields) {
 			String fieldName = field.getName().toUpperCase();
-			Method getMethod = CommonTest.getGetter(clazz, field);
+			Method getMethod = CommonTest01.getGetter(clazz, field);
 			String fieldValue = null;
 			try {
 				fieldValue = getMethod.invoke(o).toString();
