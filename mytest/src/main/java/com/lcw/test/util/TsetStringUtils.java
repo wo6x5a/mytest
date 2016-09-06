@@ -43,5 +43,10 @@ public class TsetStringUtils {
 		System.out.println(DateUtils.addDays(date1, 2));
 		System.out.println(DateUtils.round(date1, 1));
 		
+		System.out.println(StringUtils.substringAfter("http://172.16.31.196:9093/pic/article/1472792991571.png", "http://172.16.31.196:9093"));
+        String [] strs = StringUtils.substringsBetween("http://172.16.31.196:9093/pic/article/1472792991571.pngsaahttp://172.16.31.196:9093/pic/article/147279299157ddd1.png", "http://172.16.31.196:9093", ".png");
+        for(String str : strs){
+            System.out.println(str);
+         }
 	}
 }
