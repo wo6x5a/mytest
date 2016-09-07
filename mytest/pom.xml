@@ -13,7 +13,7 @@
 	</prerequisites>
 
 	<properties>
-		<jdk.version>1.7</jdk.version>
+		<jdk.version>1.8</jdk.version>
 		<cglib.version>3.2.2</cglib.version>
 		<commons.lang.version>2.6</commons.lang.version>
 	</properties>
