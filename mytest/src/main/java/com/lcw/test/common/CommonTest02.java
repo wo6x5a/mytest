@@ -12,5 +12,7 @@ public class CommonTest02 {
 		System.out.println(s3.hashCode());
 		System.out.println(s4.hashCode());
 		System.out.println(System.currentTimeMillis());
+		StringBuilder sb = new StringBuilder("1,2,3,");
+		System.out.println(sb.delete(sb.length() - 1, sb.length()));
 	}
 }
