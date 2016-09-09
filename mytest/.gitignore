@@ -1,6 +1,11 @@
-/target/
-.idea
-*.iml
 .settings
-.classpath
+.externalToolBuilders
+/.idea/
+.idea
+/target/
+target
 .project
+*.class
+.classpath
+.tern-project
+*.iml
