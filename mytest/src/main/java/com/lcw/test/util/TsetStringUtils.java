@@ -1,7 +1,6 @@
 package com.lcw.test.util;
 
 import java.util.Date;
-
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.SystemUtils;
@@ -21,6 +20,7 @@ public class TsetStringUtils {
 		System.out.println(StringUtils.trim(s4));
 		System.out.println(StringUtils.trim(s5));
 		System.out.println(StringUtils.trim(s6));
+		System.out.println(StringUtils.replace(s6, " ", ""));
 		System.out.println("---------------------------");
 		System.out.println(StringUtils.strip(s1));
 		System.out.println(StringUtils.strip(s2));
