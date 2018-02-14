@@ -1,10 +1,12 @@
 package com.lcw.test.array;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.lang3.time.DateUtils;
 
 public class TestArrayCopy {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		List<String> dtos = new ArrayList<String>();
 		List<String> dtos1 = new ArrayList<String>();
 		List<String> list = new ArrayList<String>();
@@ -27,5 +29,14 @@ public class TestArrayCopy {
 
 		System.out.println(b-a);
 		System.out.println(c-b);
+
+		StringBuilder s = new StringBuilder();
+		s.append("012345678;");
+		s.replace(s.length()-1,s.length(),"");
+		System.out.println(s);
+
+		System.out.println(DateUtils.parseDate("20170912", "yyyyMMdd"));
+
+
 	}
 }
