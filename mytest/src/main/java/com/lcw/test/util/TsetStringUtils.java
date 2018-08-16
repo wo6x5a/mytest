@@ -1,9 +1,6 @@
 package com.lcw.test.util;
 
-import java.util.Date;
-
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.time.DateUtils;
 
 public class TsetStringUtils {
 	public static void main(String[] args) {
@@ -48,23 +45,26 @@ public class TsetStringUtils {
         //    System.out.println(str);
         // }
 
-		String a = "[{\"key\":\"port\",\"value\":\"20\",\"explain\":\"\"},{\"key\":\"name\",\"value\":\"海天\",\"explain\":\"\"},{\"key\":\"name\",\"value\":\"海天\",\"explain\":\"名称\"}]";
-		String a2 = "[{\"key\":\"port\",\"value\":\"20\",\"explain\":\"\"}]";
-		String b = "[{\"key\":\"port\",\"value\":\"20\"},{\"key\":\"name\",\"value\":\"海天\"},{\"key\":\"name\",\"value\":\"海天\"}]";
-		String c = "[{\"key\":\"port\",\"value\":\"20\"}]";
-		// {"port":20;}
-
-		String a1 = "[{\"key\":\"port\",\"value\":\"20\",\"explain\":\"端口号\"},{\"key\":\"name\",\"value\":\"海天\",\"explain\":\"名称\"}]";
+		//String a = "[{\"key\":\"port\",\"value\":\"20\",\"explain\":\"\"},{\"key\":\"name\",\"value\":\"海天\",\"explain\":\"\"},{\"key\":\"name\",\"value\":\"海天\",\"explain\":\"名称\"}]";
+		//String a2 = "[{\"key\":\"port\",\"value\":\"20\",\"explain\":\"\"}]";
+		//String b = "[{\"key\":\"port\",\"value\":\"20\"},{\"key\":\"name\",\"value\":\"海天\"},{\"key\":\"name\",\"value\":\"海天\"}]";
+		//String c = "[{\"key\":\"port\",\"value\":\"20\"}]";
+		//// {"port":20;}
+        //
+		//String a1 = "[{\"key\":\"port\",\"value\":\"20\",\"explain\":\"端口号\"},{\"key\":\"name\",\"value\":\"海天\",\"explain\":\"名称\"}]";
+        //
+		//String big = "{\"bigImage\":\"oss://verify-img:0a238d63-725f-4d39-a56d-6869e8cc0f51.jpg\"}";
 
 		//System.out.println(a.replaceAll(",\"explain\":\".+\"}", "}"));
 		//System.out.println(StringUtils.replaceAll(a,",\"explain\":\".+\"}", "}"));
 		//System.out.println( replaceStr(b));
 		//System.out.println( replaceStr(c));
-		System.out.println( replaceStr2(a2));
-		System.out.println( replaceStr2(a));
-        System.out.println(DateUtils.addDays(new Date(),1));
-		System.out.println(DateUtils.addDays(new Date(),-1).before(new Date()));
+		//System.out.println( replaceStr2(a2));
+		//System.out.println( replaceStr2(a));
+        //System.out.println(DateUtils.addDays(new Date(),1));
+		//System.out.println(DateUtils.addDays(new Date(),-1).before(new Date()));
 		//System.out.println( replaceStr2(c));
+		//System.out.println( replcaeStr3(big));
 	}
 
 	private static String replaceStr(String conf){
@@ -83,6 +83,13 @@ public class TsetStringUtils {
 		conf = StringUtils.replace(conf,",\"value\"", "");
 		conf = StringUtils.replace(conf,"]", "");
 		return conf;
+	}
+
+	private static String replcaeStr3(String conf){
+
+		String faceImage = StringUtils.replace(conf,"{\"bigImage\":\"", "");
+		faceImage = StringUtils.replace(faceImage,"\"}", "");
+		return faceImage;
 	}
 
 }
